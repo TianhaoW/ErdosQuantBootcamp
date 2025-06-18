@@ -1,0 +1,16 @@
+[data]
+tickers = ['AAPL', 'F']
+default_start_date = "2020-01-01"
+
+[Backtest]
+initial_cash = 1e6
+interest_rate = 0.03
+transaction_cost = 0.0 # this is the transcation cost per share
+margin_requirement = 1.5
+
+
+# all the path are relative to the project root. They will be parsed automatically in parse_config.
+[path]
+project_root = "./"
+log_dir = "./logs"
+data_file = "./data/market_data.parquet"
