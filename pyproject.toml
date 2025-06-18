@@ -3,7 +3,7 @@ name = "erdosquantbootcamp"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    {name = "Tianhao Wang",email = "tianhw11@uci.edu"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"
@@ -15,7 +15,10 @@ dependencies = [
     "notebook (>=7.4.3,<8.0.0)",
     "toml (>=0.10.2,<0.11.0)",
     "pyarrow (>=20.0.0,<21.0.0)",
-    "fastparquet (>=2024.11.0,<2025.0.0)"
+    "fastparquet (>=2024.11.0,<2025.0.0)",
+    "scipy (>=1.15.3,<2.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "openai (>=1.88.0,<2.0.0)"
 ]
 
 

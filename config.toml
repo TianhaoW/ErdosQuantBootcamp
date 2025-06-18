@@ -1,5 +1,25 @@
 [data]
-tickers = ['AAPL', 'F']
+tickers = [
+    "SPY",   # SPY 500 - benchmark ETF. Please make sure that this is INCLUDED in the tickers
+    "AAPL",  # Apple Inc. - Technology
+    "MSFT",  # Microsoft Corp. - Technology
+    "NVDA",  # NVIDIA Corp. - Technology
+    "TSLA",  # Tesla - Technology
+    "JPM",   # JPMorgan Chase & Co. - Financials
+    "V",     # Visa Inc. - Financials
+    "XOM",   # Exxon Mobil Corp. - Energy
+    "CVX",   # Chevron Corp. - Energy
+    "UNH",   # UnitedHealth Group - Healthcare
+    "JNJ",   # Johnson & Johnson - Healthcare
+    "PG",    # Procter & Gamble - Consumer Staples
+    "WMT",   # Walmart Inc. - Consumer Staples
+    "HD",    # Home Depot - Consumer Discretionary
+    "NKE",   # Nike Inc. - Consumer Discretionary
+    "UPS",   # United Parcel Service - Industrials
+    "LMT",   # Lockheed Martin - Industrials / Defense
+    "TLT",   # Treasury Bond ETF
+    "GLD"    # Gold ETF
+]
 default_start_date = "2020-01-01"
 
 [Backtest]
