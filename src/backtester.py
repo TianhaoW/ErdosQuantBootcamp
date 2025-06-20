@@ -145,7 +145,7 @@ class Backtester:
             'alpha': alpha
         }
 
-    def plot(self, agent_name=None):
+    def plot(self, agent_name=""):
         """
         Plot portfolio value, cash, drawdown, and SPY benchmark performance.
         """
