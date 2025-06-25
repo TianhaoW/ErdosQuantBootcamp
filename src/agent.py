@@ -18,6 +18,29 @@ class Agent(ABC):
         """
         pass
 
+class SimpleBuyAndHoldAgent(Agent):
+    def __init__(self, weights: dict):
+        """
+        weights: dict of {symbol: weight}, must sum to 1.0
+        """
+        self.weights = weights
+        self.acted = False  # whether initial orders have been placed
+    def act(self, date: pd.Timestamp, market_data: pd.DataFrame, portfolio: dict, cash: float):
+        if self.acted:
+            return []  # do nothing
+
+        orders = []
+        for symbol, weight in self.weights.items():
+            if symbol not in market_data.index:
+                continue
+            close_price = market_data.loc[symbol, "close"]
+            allocation = cash * weight
+            quantity = int(allocation // close_price)
+            if quantity > 0:
+                orders.append((symbol, close_price, quantity))
+
+        self.acted = True
+        return orders
 
 # This is the RLAgent to be trained later
 class RLAgent(Agent):
